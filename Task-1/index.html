@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Journy Board</title>
+        <link rel="stylesheet" href="navbar.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+ </style>
+</head>
+<body style="margin:0">
+    <header>
+        <div id="head">
+            <img src="https://deepthought.education/assets/images/logo/logo.svg" id="logo"/>
+           <div class="icon-bar">
+           <i class="fa fa-home" style="padding: left 12px;"></i>
+           <i class="fa fa-binoculars"style="padding-left:12px;"></i>
+           <i class="fas fa-screwdriver-wrench"></i>
+           <i class="fa fa-bell-o"style="padding-left:12px;"></i>
+           <i class="fa fa-user-circle"style="padding-left:12px;"></i>
+           <i class="fa fa-ellipsis-v"style="padding-left:10px;"></i>
+          </div>
+           </div> 
+    </header>
+<section>
+<div id="nav-bar">
+    <div id="head-line">
+        <p style="-webkit-text-fill-color: white;">You Are Taking Challenge Of New Project</p>
+     </div>
+     <div style="height:50px;">
+        <p style="text-align:center; padding-top: 15px;">Name of the task goes here</p>
+     </div>
+    <nav class="sidebar close">
+        <header>
+                <div class="text logo-text">
+                    <span class="name">Jurny Board</span>
+                    <!-- <i class="fa fa-bars" aria-hidden="true"></i> -->
+                    <i class=" bx bx-chevron-right toggle"></i>
+                    <!-- <i class='fa fa-bars'></i> -->
+                </div>
+                
+        </header>
+        <div class="menu-bar">
+            <div class="menu">
+
+            
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <span class="text nav-text">Asset heading 1</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <span class="text nav-text" >Asset heading 2</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">    
+                            <span class="text nav-text">Asset heading 3</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#"> 
+                            <span class="text nav-text">Asset heading 4</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <span class="text nav-text">Asset heading 5</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <span class="text nav-text">Asset heading 6</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+                </li>
+                
+            </div>
+        </div>
+
+    </nav>
+    <script>
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+});
+    </script>
+    </div>
+<section> 
+    <div class="inline-first">
+<button class="collapsible">Asset heading 1</button>
+<div class="content">
+  <p id="collapse-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<button class="collapsible">Asset heading  3</button>
+<centre>
+<iframe
+   frameborder="0"
+   width="500"
+   height="50"
+   src="https://drive.google.com/file/d/1Pxw83bTKE3KkOyYnwm1u6DSVjntSrNTp/preview">
+</iframe></centre>
+<button class="collapsible">Asset heading  5</button>
+<div class="content">
+   <iframe
+    frameborder="0"
+    width="500"
+    height="100"
+   src="https://drive.google.com/file/d/1dBBYQsz2yt3vc4YMkRmVC3nuTBbq2GON/preview">
+</iframe>
+</div></div>
+<div class="inline-second">
+<button class="collapsible">Asset heading  2</button>
+<div class="content">
+    <form>
+        <div>
+        <textarea placeholder="Write something.."></textarea>
+    </div>
+        <div class="row">
+            <input id="submit" type="submit" value="Submit">
+          </div>
+      </form>
+</div>
+<button class="collapsible">Asset heading 4</button>
+<div class="content">
+ <img src="https://media.giphy.com/media/IzjhI7ggjDlEnMxZMu/giphy.gif"/>
+</div>
+<button class="collapsible">Asset heading 6</button>
+<div class="content">
+    <!-- <video controls width="500" height="300" autoplay >
+        <source src="https://youtu.be/s8H0Sx7jy7c?t=7" tyepe="video/mp4">
+    </video> -->
+    <iframe width="1000" height="350" src="https://www.youtube.com/embed/s8H0Sx7jy7c" 
+    title="SD LMS | Teacher Testimonial | TSUS" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+     encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div></div>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } 
+      });
+    }
+    </script>
+</section>
+</section>
+</body>
+</html>
